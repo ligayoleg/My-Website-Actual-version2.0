@@ -1,0 +1,108 @@
+@import "config";
+
+.nav {
+  padding: 15px 0;
+  background: #000;
+
+  border-bottom: 4px solid $primary-accessory;
+  .menu-links {
+    text-align: center;
+    li {
+      display: inline-block;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 10px;
+        margin: 0px 10px;
+        i {
+          display: inline;
+        }
+
+        span {
+          display: none;
+        }
+
+        .active {
+          color: $primary-accessory;
+          border: 3px solid $primary-accessory;
+          padding: 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    // Hover on link!
+    li:hover {
+      background-color: #666;
+      padding: 10px 0;
+      a {
+        i {
+          display: none;
+        }
+
+        span {
+          display: inline;
+          padding-left: 10px;
+          border-left: 2px solid $secondary-accessory;
+        }
+      }
+    }
+  }
+}
+
+//Close Button
+.close {
+  transition-duration: 0.3s;
+
+  &#nav-button {
+    padding-bottom: 10px;
+    border-radius: 50%;
+  }
+  //Hide the first line of sandwich button
+  .btn-line {
+    &:nth-child(1) {
+      display: none;
+    }
+  }
+  //Rotate to 45 degrees clockwise
+  .btn-line {
+    &:nth-child(2) {
+      transition-duration: 0.5s;
+      transform: translateY(6px) rotate(45deg);
+      margin-bottom: 10px;
+    }
+  }
+  //Rotate to 45 degrees counter-clockwise
+  .btn-line {
+    &:nth-child(3) {
+      transition-duration: 0.5s;
+      transform: translateY(-2px) rotate(-45deg);
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.show {
+  &.menu-links {
+    z-index: 2;
+    visibility: visible;
+    padding-top: 100px;
+    padding-left: 0;
+    opacity: 0.95;
+    li {
+      display: block;
+      padding: 25px;
+      margin-bottom: 15px;
+      padding-left: 0px;
+
+      a {
+        i {
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

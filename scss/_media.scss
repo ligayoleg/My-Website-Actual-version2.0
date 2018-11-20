@@ -1,0 +1,128 @@
+//Wide Screens
+@include mediaXL {
+  .wrapper {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+// Desktops and Laptops
+@include mediaLg {
+}
+
+/*=============================
+    Tablets and Small Laptops
+============================== */
+@include mediaMd {
+  .wrapper,
+  .nav {
+    font-size: 1.5em;
+  }
+  //==========hide nav
+  .menu-links {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin-top: 0;
+  }
+
+  .nav {
+    margin-top: 0;
+    padding: 30px 0;
+
+    .nav-button {
+      position: absolute;
+      background-color: #000;
+      z-index: 3;
+      top: 10px;
+      left: 45%;
+      padding: 10px;
+      padding-bottom: 4px;
+      border-radius: 10px;
+      border: solid 2px #fff;
+
+      .btn-line {
+        background-color: #fff;
+        width: 18px;
+        height: 3px;
+        margin: 0 0 5px 0;
+      }
+    }
+  }
+  //============== icons
+  #workflow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workflow-icon #brush-icon,
+  .workflow-icon #keyboard-icon,
+  .workflow-icon #bug-icon,
+  .workflow-icon #desktop-icon {
+    font-size: 1.2em;
+  }
+
+  //==========Footer
+
+  /*===================
+        ABOUT PAGE
+  ===================*/
+  .myInfo {
+    grid-template-columns: 1fr;
+
+    .profile-photo {
+      width: 350px;
+      height: 350px;
+    }
+
+    &-info {
+      padding: 20px;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/*==========================
+         Smartphones
+============================== */
+@include mediaSm {
+  .wrapper,
+  footer,
+  .nav {
+    font-size: 1em;
+  }
+
+  #workflow {
+    grid-template-columns: 1fr;
+
+    .workflow-info {
+      padding: 10px 0;
+      #brush-icon,
+      #keyboard-icon,
+      #bug-icon,
+      #desktop-icon {
+        font-size: 1.52em;
+      }
+    }
+  }
+
+  //About Page
+  .myInfo {
+    // grid-template-columns: 1fr;
+    font-size: 1rem;
+    .profile-photo {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .myInfo-info p {
+      font-size: 1rem;
+    }
+  }
+}

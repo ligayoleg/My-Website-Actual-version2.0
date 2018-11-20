@@ -1,0 +1,302 @@
+/*===========================
+            COLORS
+=============================*/
+/*===========================
+            MIXINS
+=============================*/
+/*============================
+            MEDIA
+=============================*/
+/*===========================
+            COLORS
+=============================*/
+/*===========================
+            MIXINS
+=============================*/
+/*============================
+            MEDIA
+=============================*/
+.nav {
+  padding: 15px 0;
+  background: #000;
+  border-bottom: 4px solid #c54242; }
+  .nav .menu-links {
+    text-align: center; }
+    .nav .menu-links li {
+      display: inline-block; }
+      .nav .menu-links li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 10px;
+        margin: 0px 10px; }
+        .nav .menu-links li a i {
+          display: inline; }
+        .nav .menu-links li a span {
+          display: none; }
+        .nav .menu-links li a .active {
+          color: #c54242;
+          border: 3px solid #c54242;
+          padding: 10px;
+          border-radius: 10px; }
+    .nav .menu-links li:hover {
+      background-color: #666;
+      padding: 10px 0; }
+      .nav .menu-links li:hover a i {
+        display: none; }
+      .nav .menu-links li:hover a span {
+        display: inline;
+        padding-left: 10px;
+        border-left: 2px solid #a83333; }
+
+.close {
+  transition-duration: 0.3s; }
+  .close#nav-button {
+    padding-bottom: 10px;
+    border-radius: 50%; }
+  .close .btn-line:nth-child(1) {
+    display: none; }
+  .close .btn-line:nth-child(2) {
+    transition-duration: 0.5s;
+    transform: translateY(6px) rotate(45deg);
+    margin-bottom: 10px; }
+  .close .btn-line:nth-child(3) {
+    transition-duration: 0.5s;
+    transform: translateY(-2px) rotate(-45deg);
+    margin-bottom: 10px; }
+
+.show.menu-links {
+  z-index: 2;
+  visibility: visible;
+  padding-top: 100px;
+  padding-left: 0;
+  opacity: 0.95; }
+  .show.menu-links li {
+    display: block;
+    padding: 25px;
+    margin-bottom: 15px;
+    padding-left: 0px; }
+    .show.menu-links li a i span {
+      display: block; }
+
+/*===========================
+            MAIN STYLES
+==============================*/
+body {
+  font-family: "Courier New", Courier, monospace;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  min-width: 300px;
+  background: url(../img/keyboard.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left top;
+  margin: 0; }
+
+.wrapper {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  margin: 60px;
+  margin-bottom: 60px;
+  height: 100%; }
+  .wrapper .title h1 {
+    text-transform: uppercase; }
+  .wrapper .title span {
+    color: #c54242; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+footer {
+  left: 45%;
+  color: white;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 40px; }
+  footer ul {
+    padding: 0; }
+    footer ul li {
+      display: inline-block;
+      padding: 0;
+      margin-right: 10px; }
+      footer ul li i {
+        color: #fff; }
+    footer ul li:nth-child(1):hover i {
+      transition-duration: 0.5s;
+      color: purple; }
+    footer ul li:nth-child(2):hover i {
+      transition-duration: 0.5s;
+      color: #0156a5; }
+    footer ul li:nth-child(3):hover i {
+      color: green; }
+    footer ul li:nth-child(4):hover i {
+      transition-duration: 0.5s;
+      color: #792b2b; }
+
+/*============================
+            HOME PAGE
+==============================*/
+.wrapper {
+  font-size: 2rem; }
+  .wrapper span {
+    color: #000; }
+
+/*===========================
+          WORKFLOW
+============================*/
+#workflow {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  height: 300px; }
+
+.workflow-icon {
+  padding: 10px;
+  align-self: center; }
+  .workflow-icon i.fas {
+    font-size: 2rem; }
+
+.workflow-context {
+  display: none; }
+  .workflow-context h4 {
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-bottom: 0; }
+  .workflow-context p {
+    margin-top: 0px;
+    padding: 15px; }
+
+.workflow-icon #brush-icon,
+.workflow-icon #keyboard-icon,
+.workflow-icon #bug-icon,
+.workflow-icon #desktop-icon {
+  font-size: 2em; }
+
+.workflow-info:hover .workflow-icon {
+  display: none; }
+
+.workflow-info:hover #design,
+.workflow-info:hover #develop,
+.workflow-info:hover #debug,
+.workflow-info:hover #deploy {
+  display: block;
+  font-size: 1.3rem; }
+  .workflow-info:hover #design p,
+  .workflow-info:hover #develop p,
+  .workflow-info:hover #debug p,
+  .workflow-info:hover #deploy p {
+    background-color: rgba(109, 30, 109, 0.1); }
+
+/*==========================================
+              ABOUT PAGE                            
+===========================================*/
+.myInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr; }
+  .myInfo .profile-photo {
+    justify-self: center;
+    align-self: center; }
+  .myInfo img {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #a83333;
+    border-radius: 50%; }
+  .myInfo .myInfo-info {
+    text-align: left; }
+    .myInfo .myInfo-info p {
+      font-size: 1.5rem; }
+
+@media screen and (min-width: 1171px) {
+  .wrapper {
+    margin-left: 15%;
+    margin-right: 15%; } }
+
+/*=============================
+    Tablets and Small Laptops
+============================== */
+@media screen and (max-width: 768px) {
+  .wrapper,
+  .nav {
+    font-size: 1.5em; }
+  .menu-links {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin-top: 0; }
+  .nav {
+    margin-top: 0;
+    padding: 30px 0; }
+    .nav .nav-button {
+      position: absolute;
+      background-color: #000;
+      z-index: 3;
+      top: 10px;
+      left: 45%;
+      padding: 10px;
+      padding-bottom: 4px;
+      border-radius: 10px;
+      border: solid 2px #fff; }
+      .nav .nav-button .btn-line {
+        background-color: #fff;
+        width: 18px;
+        height: 3px;
+        margin: 0 0 5px 0; }
+  #workflow {
+    grid-template-columns: repeat(2, 1fr); }
+  .workflow-icon #brush-icon,
+  .workflow-icon #keyboard-icon,
+  .workflow-icon #bug-icon,
+  .workflow-icon #desktop-icon {
+    font-size: 1.2em; }
+  /*===================
+        ABOUT PAGE
+  ===================*/
+  .myInfo {
+    grid-template-columns: 1fr; }
+    .myInfo .profile-photo {
+      width: 350px;
+      height: 350px; }
+    .myInfo-info {
+      padding: 20px; }
+      .myInfo-info p {
+        font-size: 1rem; } }
+
+/*==========================
+         Smartphones
+============================== */
+@media screen and (max-width: 500px) {
+  .wrapper,
+  footer,
+  .nav {
+    font-size: 1em; }
+  #workflow {
+    grid-template-columns: 1fr; }
+    #workflow .workflow-info {
+      padding: 10px 0; }
+      #workflow .workflow-info #brush-icon,
+      #workflow .workflow-info #keyboard-icon,
+      #workflow .workflow-info #bug-icon,
+      #workflow .workflow-info #desktop-icon {
+        font-size: 1.52em; }
+  .myInfo {
+    font-size: 1rem; }
+    .myInfo .profile-photo img {
+      width: 150px;
+      height: 150px; }
+    .myInfo .myInfo-info p {
+      font-size: 1rem; } }

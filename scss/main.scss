@@ -1,0 +1,205 @@
+@import "config";
+@import "menu";
+
+/*===========================
+            MAIN STYLES
+==============================*/
+body {
+  font-family: "Courier New", Courier, monospace;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  min-width: 300px;
+  background: url(../img/keyboard.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left top;
+  margin: 0;
+}
+
+.wrapper {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  margin: 60px;
+  margin-bottom: 60px;
+  height: 100%;
+
+  .title {
+    h1 {
+      text-transform: uppercase;
+    }
+    span {
+      color: $primary-accessory;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+// ========== FOOTER =================
+footer {
+  left: 45%;
+  color: white;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 40px;
+
+  ul {
+    padding: 0;
+    li {
+      display: inline-block;
+      padding: 0;
+      margin-right: 10px;
+      i {
+        color: #fff;
+      }
+    }
+
+    li:nth-child(1):hover {
+      i {
+        transition-duration: 0.5s;
+        color: purple;
+      }
+    }
+
+    li:nth-child(2):hover {
+      i {
+        transition-duration: 0.5s;
+        color: rgb(1, 86, 165);
+      }
+    }
+
+    li:nth-child(3):hover {
+      i {
+        @include easeOut();
+        color: green;
+      }
+    }
+
+    li:nth-child(4):hover {
+      i {
+        transition-duration: 0.5s;
+        color: rgb(121, 43, 43);
+      }
+    }
+  }
+}
+
+/*============================
+            HOME PAGE
+==============================*/
+.wrapper {
+  font-size: 2rem;
+  // padding-left: 100px;
+
+  //Last Name
+  span {
+    color: #000;
+  }
+}
+
+/*===========================
+          WORKFLOW
+============================*/
+#workflow {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  height: 300px;
+}
+
+.workflow-icon {
+  padding: 10px;
+  align-self: center;
+
+  i {
+    &.fas {
+      font-size: 2rem;
+    }
+  }
+}
+
+.workflow-context {
+  display: none;
+
+  h4 {
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0px;
+    padding: 15px;
+  }
+}
+
+.workflow-icon #brush-icon,
+.workflow-icon #keyboard-icon,
+.workflow-icon #bug-icon,
+.workflow-icon #desktop-icon {
+  font-size: 2em;
+}
+
+.workflow-info:hover {
+  .workflow-icon {
+    display: none;
+  }
+
+  #design,
+  #develop,
+  #debug,
+  #deploy {
+    display: block;
+    font-size: 1.3rem;
+
+    p {
+      background-color: rgba(109, 30, 109, 0.1);
+    }
+  }
+}
+
+/*==========================================
+              ABOUT PAGE                            
+===========================================*/
+.myInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  .profile-photo {
+    justify-self: center;
+    align-self: center;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border: 3px solid $secondary-accessory;
+    border-radius: 50%;
+  }
+
+  .myInfo-info {
+    text-align: left;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@import "media";

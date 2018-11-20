@@ -1,0 +1,14 @@
+{
+  "name": "www.olegligay.com",
+  "version": "2.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o src/assets/css --recursive"
+  },
+  "author": "Oleg Ligay",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  }
+}
