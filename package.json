@@ -9,6 +9,6 @@
   "author": "Oleg Ligay",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.9.4"
+    "node-sass": "^4.13.1"
   }
 }
